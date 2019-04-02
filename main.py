@@ -21,16 +21,16 @@ except:
     print('Couldn\'t import the base Libs.')
     exit()
 ## #  Changind Directory
-sys.path.insert(0, 'ttc')
+sys.path.insert(0, 'tictactoe')
 
-logFile = open("ttc_logfile.txt","w+")
+logFile = open("ttt_logfile.txt","w+")
 def gameLog(l):
     global logFile
     logFile.write(logFile.read()+"\n"+str( strftime("%Y-%m-%d %H:%M:%S", gmtime()) )+' | '+l)
 
 try:
     import normal
-    import ttc_init
+    import ttt_init
     import bot
 except:
     print("Couldn't load the Gamefiles")
@@ -38,23 +38,23 @@ except:
 
 
 # Intro
-print(ttc_init.intro_step_1)
-ttc_init.time.sleep(0.5)
+print(ttt_init.intro_step_1)
+ttt_init.time.sleep(0.5)
 print("\n"*100)
-print(ttc_init.intro_step_2)
-ttc_init.time.sleep(0.5)
+print(ttt_init.intro_step_2)
+ttt_init.time.sleep(0.5)
 print("\n"*100)
-print(ttc_init.intro_step_3)
-ttc_init.time.sleep(0.5)
+print(ttt_init.intro_step_3)
+ttt_init.time.sleep(0.5)
 
 
 h = 50
 while h != 0:
-    ttc_init.time.sleep(0.05)
+    ttt_init.time.sleep(0.05)
     print("\n")
     h-=1
 
-ttc_init.flyingMatchfield()
+ttt_init.flyingMatchfield()
 
 # Gameoptions
 
